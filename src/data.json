@@ -42,6 +42,12 @@
             "about": "A web scraper to get information about our faculty at VIT Chennai. Made for <a href='https://lugvitc.github.io/#/events#adrenaline'>event</a> [Adrenaline/FOSS Day](https://lugvitc.github.io/#/events#adrenaline).",
             "githubLink": "https://github.com/The5thAxiom/vitc-professor-scraper",
             "directLink": null
+        },
+        {
+            "name": "jsGames",
+            "about": "Simple games made in js for fun",
+            "githubLink": "https://github.com/The5thAxiom/jsGames",
+            "directLink": null
         }
     ],
     "programmingSkills": [
