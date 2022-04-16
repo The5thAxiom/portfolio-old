@@ -1,0 +1,50 @@
+{
+    "name": "Samridh Anand Paatni",
+    "intro": "I like to code, learn about languages, play table tennis and ❤️ to cook!",
+    "roles": [
+        "web dev enthusiast",
+        "UG Student at VIT Chennai",
+        "Member of Linux Club",
+        "computer geek",
+        "cook",
+        "food lover",
+        "language nerd"
+    ],
+    "projects": [
+        {
+            "name": "Linux Club Website",
+            "about": "A React.js site to showcase [VIT Chennai's Linux Club](https://github.com/lugvitc), made by me and [@3V3YONE](https://github.com/3V3RYONE)",
+            "githubLink": "https://github.com/lugvitc/lugvitc.github.io",
+            "directLink": "https://lugvitc.github.io"
+        },
+        {
+            "name": "Cookbook",
+            "about": "A typescript React frontend with a flask REST api, a WIP site for keeping track of the stuff I like to cook!",
+            "githubLink": "https://github.com/The5thAxiom/cookbook",
+            "directLink": "https://cookbook-demo-the5thaxiom.herokuapp.com"
+        },
+        {
+            "name": "Samazon",
+            "about": "HTML, CSS, Javascript and PHP a (still WIP) simple mock e-commerce site made like they used to in the good old days. Samazon, we find what you want and give it to you!",
+            "githubLink": "https://github.com/The5thAxiom/samazon",
+            "directLink": null
+        },
+        {
+            "name": "VITC Professors Web Scraper",
+            "about": "A web scraper to get information about our faculty at VIT Chennai. Made for <a href='https://lugvitc.github.io/#/events#adrenaline'>event</a> [Adrenaline/FOSS Day](https://lugvitc.github.io/#/events#adrenaline).",
+            "githubLink": "https://github.com/The5thAxiom/vitc-professor-scraper",
+            "directLink": null
+        }
+    ],
+    "programmingSkills": [
+        "javascript",
+        "html",
+        "css",
+        "python",
+        "php",
+        "C/C++",
+        "Java",
+        "Scala"
+    ],
+    "techSkills": ["vim", "LaTeX", "git/github", "bash shell"]
+}
