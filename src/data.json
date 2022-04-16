@@ -27,7 +27,7 @@
             "name": "Samazon",
             "about": "HTML, CSS, Javascript and PHP a (still WIP) simple mock e-commerce site made like they used to in the good old days. Samazon, we find what you want and give it to you!",
             "githubLink": "https://github.com/The5thAxiom/samazon",
-            "directLink": null
+            "directLink": "https://samazon-demo-the5thaxiom.herokuapp.com/"
         },
         {
             "name": "VITC Professors Web Scraper",
