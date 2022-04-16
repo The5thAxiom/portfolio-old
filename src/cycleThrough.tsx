@@ -12,6 +12,7 @@ export default function CycleTrough({ array, delay = 1000 }: arrayForCycle) {
             delay
         );
         return () => clearInterval(interval); // cleanup function (equivalent to componentDidUnmount)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentIndex]); // run whenever the currentIndex is changed
 
     return (
