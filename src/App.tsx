@@ -5,6 +5,16 @@ import data from './data.json';
 export default function App() {
     return (
         <>
+            <nav>
+                {data.socialLinks.map((link, index) => (
+                    <>
+                        <a href={link.link} target='_blank' rel='noreferrer'>
+                            {link.name}
+                        </a>
+                        {index !== data.socialLinks.length - 1 && ' | '}
+                    </>
+                ))}
+            </nav>
             <h1>Samridh</h1>
             <p>{data.intro}</p>
             <h2>
@@ -24,6 +34,7 @@ export default function App() {
                         <a href={project.githubLink}>check it out on github</a>
                     </b>
                     <p>{project.about}</p>
+                    {index !== data.projects.length - 1 && <hr />}
                 </section>
             ))}
             <h2>Programming Skills:</h2>

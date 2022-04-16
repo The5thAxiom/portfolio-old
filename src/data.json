@@ -1,5 +1,13 @@
 {
     "name": "Samridh Anand Paatni",
+    "socialLinks": [
+        { "name": "Github", "link": "https://github.com/The5thAxiom" },
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/samridh-anand-paatni-57a045215/"
+        },
+        { "name": "Instagram", "link": "https://www.instagram.com/" }
+    ],
     "intro": "I like to code, learn about languages, play table tennis and ❤️ to cook!",
     "roles": [
         "web dev enthusiast",
