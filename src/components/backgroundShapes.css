@@ -1,0 +1,60 @@
+#bg-wave {
+    position: fixed;
+    width: var(--wave-width);
+    height: 100vh;
+    background-color: var(--main-orange);
+    border: 0;
+}
+.bg-wave-circle {
+    position: relative;
+    margin: 0;
+    height: var(--wave-radius);
+    width: var(--wave-radius);
+    border-radius: var(--wave-radius);
+    transform: translateX(calc(var(--wave-width) - var(--wave-radius) / 2));
+}
+
+.alpha {
+    background-color: var(--main-orange);
+}
+
+.beta {
+    width: calc(var(--wave-radius) / 2 + 1px);
+    background-color: var(--light-blue);
+    border-radius: var(--wave-radius) 0 0 var(--wave-radius);
+    border-color: var(--light-blue);
+}
+
+#bg-circle-one {
+    position: fixed;
+    background-color: var(--main-blue);
+
+    width: var(--circle-one-radius);
+    height: var(--circle-one-radius);
+    border-radius: var(--circle-one-radius);
+    z-index: 0;
+    transform: translate(
+        calc(50vw - var(--circle-one-radius) / 2),
+        calc(-1 * var(--circle-one-radius) / 4)
+    );
+}
+
+#bg-circle-two {
+    position: fixed;
+    background-color: var(--main-blue);
+
+    width: var(--circle-two-radius);
+    height: var(--circle-two-radius);
+    border-radius: var(--circle-two-radius);
+    z-index: 0;
+    transform: translate(
+        calc(100vw - var(--circle-one-radius) / 1.5),
+        calc(var(--circle-one-radius) / 2)
+    );
+}
+
+@media only screen and (max-width: 600px) {
+    #bg-shapes {
+        display: none;
+    }
+}
