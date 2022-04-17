@@ -1,4 +1,6 @@
 #bg-wave {
+    top: 0;
+    left: 0;
     position: fixed;
     width: var(--wave-width);
     height: 100vh;
@@ -107,7 +109,7 @@
         border-radius: calc(var(--circle-one-radius) * 2);
         z-index: -1;
 
-        transform: translate(calc(10px - var(--circle-one-radius)), 30vh);
+        transform: translate(calc(50px - var(--circle-one-radius)), 30vh);
     }
 
     #bg-circle-two {

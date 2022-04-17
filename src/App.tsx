@@ -1,34 +1,21 @@
 import React from 'react';
-import BackgroundShapes from './components/backgroundShapes';
-import CycleTrough from './cycleThrough';
-import data from './data.json';
+import CycleTrough from './components/cycleThrough';
+import Navbar from './components/navbar';
+import { general, projects } from './data';
 
 export default function App() {
     return (
         <>
-            <BackgroundShapes />
-            <nav>
-                {data.socialLinks.map((link, index) => (
-                    <a
-                        key={index}
-                        href={link.link}
-                        target='_blank'
-                        rel='noreferrer'
-                    >
-                        {link.name}
-                        <br />
-                    </a>
-                ))}
-            </nav>
+            <Navbar />
             <header>
-                <h1>Samridh</h1>
-                <p>{data.intro}</p>
-                I am a: <CycleTrough array={data.roles} />
+                <h1>Hello, I am {general.name}!</h1>
+                <p>{general.intro}</p>
+                I am a: <CycleTrough array={general.roles} />
             </header>
             <main>
-                <article id='projects'>
+                <section id='projects'>
                     <h2>Projects</h2>
-                    {data.projects.map((project, index) => (
+                    {projects.map((project, index) => (
                         <section key={index} id={project.name}>
                             {project.directLink ? (
                                 <h3>
@@ -45,24 +32,24 @@ export default function App() {
                                 </a>
                             </b>
                             <p>{project.about}</p>
-                            {index !== data.projects.length - 1 && <hr />}
+                            {index !== projects.length - 1 && <hr />}
                         </section>
                     ))}
-                </article>
-                <article id='skills'>
+                </section>
+                <section id='skills'>
                     <h2>Programming Skills:</h2>
                     <ul>
-                        {data.programmingSkills.map((skill, index) => (
+                        {general.programmingSkills.map((skill, index) => (
                             <li key={index}>{skill}</li>
                         ))}
                     </ul>
                     <h2>General Tech Skills:</h2>
                     <ul>
-                        {data.techSkills.map((skill, index) => (
+                        {general.techSkills.map((skill, index) => (
                             <li key={index}>{skill}</li>
                         ))}
                     </ul>
-                </article>
+                </section>
             </main>
         </>
     );

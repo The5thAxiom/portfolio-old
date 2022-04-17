@@ -6,11 +6,12 @@
     --main-blue: #1073e5;
     --main-pink: #ef869c;
 
+    --navbar-link-radius: 50px;
     --circle-one-radius: calc(100vw / 5);
     --circle-two-radius: calc(100vw / 4);
     --num-waves: 5;
     --wave-radius: calc(100vh / (var(--num-waves) * 2));
-    --wave-content-width: calc(100vw / 8);
+    --wave-content-width: calc(100vw / 10);
     --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
 }
 
@@ -34,15 +35,9 @@ body,
 
 header,
 main,
-nav,
 footer {
     padding-left: calc(var(--wave-width) + var(--wave-radius));
-    /* z-index: 3; */
     margin: 0;
-}
-
-nav {
-    padding-top: 10px;
 }
 
 footer {
@@ -71,6 +66,10 @@ a:visited:hover {
     color: var(--main-pink);
 }
 
+h1 {
+    padding-top: 0;
+}
+
 @media only screen and (max-width: 600px) {
     :root {
         --circle-one-radius: calc(100vh / 5);
@@ -83,7 +82,6 @@ a:visited:hover {
 
     header,
     main,
-    nav,
     footer {
         padding-left: 10px;
     }
