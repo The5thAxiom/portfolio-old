@@ -6,10 +6,16 @@
     --main-blue: #1073e5;
     --main-pink: #ef869c;
 
-    --circle-one-radius: calc(100vw / 3);
-    --circle-two-radius: calc(100vw / 3);
-    --wave-width: calc(100vw / 6);
-    --wave-radius: calc(100vh / 10);
+    --circle-one-radius: calc(100vw / 5);
+    --circle-two-radius: calc(100vw / 4);
+    --num-waves: 5;
+    --wave-radius: calc(100vh / (var(--num-waves) * 2));
+    --wave-content-width: calc(100vw / 8);
+    --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
+}
+
+body {
+    background-color: var(--light-blue);
 }
 
 body,
@@ -24,20 +30,14 @@ div#root {
 body,
 * {
     font-family: 'Secular One', sans-serif;
-    background: var(--light-blue);
-    z-index: -1;
-}
-
-body * {
-    z-index: 1;
 }
 
 header,
 main,
 nav,
 footer {
-    padding-left: calc(var(--wave-width) + var(--wave-radius) + 10px);
-    z-index: 3;
+    padding-left: calc(var(--wave-width) + var(--wave-radius));
+    /* z-index: 3; */
     margin: 0;
 }
 
@@ -72,10 +72,24 @@ a:visited:hover {
 }
 
 @media only screen and (max-width: 600px) {
+    :root {
+        --circle-one-radius: calc(100vh / 5);
+        --circle-two-radius: calc(100vh / 4);
+        --num-waves: 5;
+        --wave-radius: calc(100vw / (var(--num-waves) * 2));
+        --wave-content-width: calc(100vh / 8);
+        --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
+    }
+
     header,
     main,
     nav,
     footer {
         padding-left: 10px;
+    }
+
+    header {
+        padding-left: 10px;
+        padding-top: calc(var(--wave-width) + var(--wave-radius));
     }
 }

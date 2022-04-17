@@ -64,7 +64,6 @@ export default function App() {
                     </ul>
                 </article>
             </main>
-            <footer>Made using </footer>
         </>
     );
 }

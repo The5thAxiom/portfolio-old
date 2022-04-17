@@ -4,35 +4,43 @@
     height: 100vh;
     background-color: var(--main-orange);
     border: 0;
+    border-color: var(--light-blue);
+    z-index: -1;
 }
+
 .bg-wave-circle {
     position: relative;
     margin: 0;
     height: var(--wave-radius);
     width: var(--wave-radius);
     border-radius: var(--wave-radius);
-    transform: translateX(calc(var(--wave-width) - var(--wave-radius) / 2));
+    z-index: inherit;
 }
 
-.alpha {
+.colour {
     background-color: var(--main-orange);
+    transform: translateX(calc(var(--wave-width) - 2px));
+    border-radius: 0 var(--wave-radius) var(--wave-radius) 0;
+    width: calc(var(--wave-radius) / 2);
 }
 
-.beta {
+.no-colour {
+    transform: translateX(
+        calc(var(--wave-width) - (var(--wave-radius) / 2) + 2px)
+    );
     width: calc(var(--wave-radius) / 2 + 1px);
     background-color: var(--light-blue);
     border-radius: var(--wave-radius) 0 0 var(--wave-radius);
-    border-color: var(--light-blue);
 }
 
 #bg-circle-one {
     position: fixed;
     background-color: var(--main-blue);
+    width: calc(var(--circle-one-radius) * 2);
+    height: calc(var(--circle-one-radius) * 2);
+    border-radius: calc(var(--circle-one-radius) * 2);
+    z-index: -1;
 
-    width: var(--circle-one-radius);
-    height: var(--circle-one-radius);
-    border-radius: var(--circle-one-radius);
-    z-index: 0;
     transform: translate(
         calc(50vw - var(--circle-one-radius) / 2),
         calc(-1 * var(--circle-one-radius) / 4)
@@ -42,19 +50,77 @@
 #bg-circle-two {
     position: fixed;
     background-color: var(--main-blue);
+    width: calc(var(--circle-two-radius) * 2);
+    height: calc(var(--circle-two-radius) * 2);
+    border-radius: calc(var(--circle-two-radius) * 2);
+    z-index: -1;
 
-    width: var(--circle-two-radius);
-    height: var(--circle-two-radius);
-    border-radius: var(--circle-two-radius);
-    z-index: 0;
     transform: translate(
-        calc(100vw - var(--circle-one-radius) / 1.5),
-        calc(var(--circle-one-radius) / 2)
+        calc(100vw - var(--circle-two-radius) - 90px),
+        calc(100vh - var(--circle-two-radius) - 70px)
     );
 }
 
 @media only screen and (max-width: 600px) {
-    #bg-shapes {
-        display: none;
+    #bg-wave {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100vw;
+        height: var(--wave-width);
+        background-color: var(--main-orange);
+        border: 0;
+        border-color: var(--light-blue);
+        z-index: 0;
+    }
+
+    .bg-wave-circle {
+        position: relative;
+        margin: 0;
+        width: var(--wave-radius);
+        z-index: inherit;
+    }
+
+    .colour {
+        background-color: var(--main-orange);
+        transform: translateY(calc(var(--wave-width) - 2px));
+        border-radius: 0 0 var(--wave-radius) var(--wave-radius);
+        height: calc(var(--wave-radius) / 2);
+    }
+
+    .no-colour {
+        transform: translateY(
+            calc(var(--wave-width) - (var(--wave-radius) / 2) + 2px)
+        );
+        height: calc(var(--wave-radius) / 2);
+        z-index: -1;
+
+        background-color: var(--light-blue);
+        border-radius: var(--wave-radius) var(--wave-radius) 0 0;
+    }
+
+    #bg-circle-one {
+        position: fixed;
+        background-color: var(--main-blue);
+        width: calc(var(--circle-one-radius) * 2);
+        height: calc(var(--circle-one-radius) * 2);
+        border-radius: calc(var(--circle-one-radius) * 2);
+        z-index: -1;
+
+        transform: translate(calc(10px - var(--circle-one-radius)), 30vh);
+    }
+
+    #bg-circle-two {
+        position: fixed;
+        background-color: var(--main-blue);
+        width: calc(var(--circle-two-radius) * 2);
+        height: calc(var(--circle-two-radius) * 2);
+        border-radius: calc(var(--circle-two-radius) * 2);
+        z-index: -1;
+
+        transform: translate(
+            calc(100vw - var(--circle-two-radius) - 90px),
+            calc(100vh - var(--circle-two-radius) - 70px)
+        );
     }
 }
