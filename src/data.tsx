@@ -73,38 +73,67 @@ export const socialLinks: socialLink[] = [
 
 type project = {
     name: string;
-    about: string;
+    about: JSX.Element;
     githubLink: string;
     directLink: string | null;
 };
 export const projects: project[] = [
     {
         name: 'Linux Club Website',
-        about: "A React.js site to showcase [VIT Chennai's Linux Club](https://github.com/lugvitc), made by me and [@3V3YONE](https://github.com/3V3RYONE)",
+        about: (
+            <>
+                A React.js site to showcase{' '}
+                <a href='https://github.com/lugvitc'>
+                    VIT Chennai's Linux Club
+                </a>
+                , made by me and{' '}
+                <a href='https://github.com/3V3RYONE'>@3V3YONE</a>
+            </>
+        ),
         githubLink: 'https://github.com/lugvitc/lugvitc.github.io',
         directLink: 'https://lugvitc.github.io',
     },
     {
         name: 'Cookbook',
-        about: 'A typescript React frontend with a flask REST api, a WIP site for keeping track of the stuff I like to cook!',
+        about: (
+            <>
+                A typescript React frontend with a flask REST api, a WIP site
+                for keeping track of the stuff I like to cook!
+            </>
+        ),
         githubLink: 'https://github.com/The5thAxiom/cookbook',
         directLink: 'https://cookbook-demo-the5thaxiom.herokuapp.com',
     },
     {
         name: 'Samazon',
-        about: 'HTML, CSS, Javascript and PHP a (still WIP) simple mock e-commerce site made like they used to in the good old days. Samazon, we find what you want and give it to you!',
+        about: (
+            <>
+                HTML, CSS, Javascript and PHP a (still WIP) simple mock
+                e-commerce site made like they used to in the good old days.
+                Samazon, we find what you want and give it to you!'
+            </>
+        ),
         githubLink: 'https://github.com/The5thAxiom/samazon',
         directLink: 'https://samazon-demo-the5thaxiom.herokuapp.com/',
     },
     {
         name: 'VITC Professors Web Scraper',
-        about: "A web scraper to get information about our faculty at VIT Chennai. Made for <a href='https://lugvitc.github.io/#/events#adrenaline'>event</a> [Adrenaline/FOSS Day](https://lugvitc.github.io/#/events#adrenaline).",
+        about: (
+            <>
+                A web scraper to get information about our faculty at VIT
+                Chennai. Made for{' '}
+                <a href='https://lugvitc.github.io/#/events#adrenaline'>
+                    Adrenaline/FOSS Day
+                </a>
+                .
+            </>
+        ),
         githubLink: 'https://github.com/The5thAxiom/vitc-professor-scraper',
         directLink: null,
     },
     {
         name: 'jsGames',
-        about: 'Simple games made in js for fun',
+        about: <>Simple games made in js for fun</>,
         githubLink: 'https://github.com/The5thAxiom/jsGames',
         directLink: null,
     },

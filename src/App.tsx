@@ -7,8 +7,10 @@ export default function App() {
         <main>
             <section id='index'>
                 <h1>Hello 👋, I am Samridh!</h1>
-                <p>{general.intro}</p>
-                I am a: <CycleTrough array={general.roles} />
+                {/* <p>{general.intro}</p> */}
+                <span style={{ fontSize: '2rem' }}>
+                    I am a: <CycleTrough array={general.roles} />
+                </span>
             </section>
             <section id='projects'>
                 <h2>Projects</h2>

@@ -18,6 +18,11 @@
     --content-width: calc(100vw - var(--wave-width));
 }
 
+hr {
+    background-color: black;
+    border-color: black;
+}
+
 body {
     background-color: var(--light-blue);
 }

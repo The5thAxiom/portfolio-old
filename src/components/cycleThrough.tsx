@@ -15,9 +15,5 @@ export default function CycleTrough({ array, delay = 1000 }: arrayForCycle) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentIndex]); // run whenever the currentIndex is changed
 
-    return (
-        <u>
-            <b>{array[currentIndex]}</b>
-        </u>
-    );
+    return <b style={{ color: 'var(--main-orange)' }}>{array[currentIndex]}</b>;
 }
