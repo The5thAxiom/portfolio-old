@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import BackgroundShapes from './components/backgroundShapes';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import Navbar from './components/navbar';
 
 const root = ReactDOM.createRoot(
@@ -14,7 +13,6 @@ root.render(
         <>
             <BackgroundShapes />
             <Navbar />
-            {/* <main /> */}
             <App />
         </>
     </React.StrictMode>
