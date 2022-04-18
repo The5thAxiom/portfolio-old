@@ -57,7 +57,7 @@ export const socialLinks: socialLink[] = [
     },
     {
         name: 'Instagram',
-        link: 'https://www.instagram.com/',
+        link: 'https://www.instagram.com/samridhpaatni/',
         icon: (
             <svg
                 role='img'
