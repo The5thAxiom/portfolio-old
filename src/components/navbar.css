@@ -7,8 +7,8 @@ nav {
     );
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: var(--navbar-link-radius);
+    column-gap: var(--navbar-link-radius);
     position: fixed;
     z-index: 1;
     height: 100vh;

@@ -44,7 +44,7 @@
     z-index: -1;
 
     transform: translate(
-        calc(50vw - var(--circle-one-radius) / 2),
+        calc(50vw - var(--circle-one-radius) * 1.5),
         calc(-1 * var(--circle-one-radius) / 4)
     );
 }
@@ -58,9 +58,20 @@
     z-index: -1;
 
     transform: translate(
-        calc(100vw - var(--circle-two-radius) - 90px),
-        calc(100vh - var(--circle-two-radius) - 70px)
+        calc(100vw - var(--circle-two-radius) * 1.5),
+        calc(100vh - var(--circle-two-radius) * 1.5)
     );
+}
+
+#bg-circle-three {
+    position: fixed;
+    background-color: var(--main-blue);
+    width: calc(var(--circle-three-radius) * 2);
+    height: calc(var(--circle-three-radius) * 2);
+    border-radius: calc(var(--circle-three-radius) * 2);
+    z-index: -1;
+
+    transform: translate(calc(20vw), calc(80vh));
 }
 
 @media only screen and (max-width: 600px) {
@@ -102,27 +113,17 @@
     }
 
     #bg-circle-one {
-        position: fixed;
-        background-color: var(--main-blue);
-        width: calc(var(--circle-one-radius) * 2);
-        height: calc(var(--circle-one-radius) * 2);
-        border-radius: calc(var(--circle-one-radius) * 2);
-        z-index: -1;
-
         transform: translate(calc(50px - var(--circle-one-radius)), 30vh);
     }
 
     #bg-circle-two {
-        position: fixed;
-        background-color: var(--main-blue);
-        width: calc(var(--circle-two-radius) * 2);
-        height: calc(var(--circle-two-radius) * 2);
-        border-radius: calc(var(--circle-two-radius) * 2);
-        z-index: -1;
-
         transform: translate(
-            calc(100vw - var(--circle-two-radius) - 90px),
-            calc(100vh - var(--circle-two-radius) - 70px)
+            calc(100vw - var(--circle-two-radius) * 1.5),
+            calc(100vh - var(--circle-two-radius) * 1.2)
         );
+    }
+
+    #bg-circle-three {
+        transform: translate(80vw, 30vh);
     }
 }
