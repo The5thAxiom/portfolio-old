@@ -44,7 +44,7 @@
     z-index: -1;
 
     transform: translate(
-        calc(50vw - var(--circle-one-radius) * 1.5),
+        calc(50vw - var(--circle-one-radius)),
         calc(-1 * var(--circle-one-radius) / 4)
     );
 }
@@ -55,12 +55,20 @@
     width: calc(var(--circle-two-radius) * 2);
     height: calc(var(--circle-two-radius) * 2);
     border-radius: calc(var(--circle-two-radius) * 2);
-    z-index: -1;
+    z-index: 5;
 
     transform: translate(
         calc(100vw - var(--circle-two-radius) * 1.5),
         calc(100vh - var(--circle-two-radius) * 1.5)
     );
+}
+
+.offset-heading {
+    font-size: min(4rem, calc(100vh / 10));
+    word-wrap: break-word;
+    width: calc(var(--circle-one-radius) * 1.5);
+    margin-top: calc(var(--circle-two-radius) * 0.4);
+    margin-left: calc(var(--circle-two-radius) * 0.4);
 }
 
 #bg-circle-three {
@@ -121,6 +129,12 @@
             calc(100vw - var(--circle-two-radius) * 1.5),
             calc(100vh - var(--circle-two-radius) * 1.2)
         );
+    }
+
+    .offset-heading {
+        margin-top: calc(var(--circle-two-radius) * 0.3);
+        margin-left: calc(var(--circle-two-radius) * 0.5);
+        font-size: 2rem;
     }
 
     #bg-circle-three {

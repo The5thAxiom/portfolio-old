@@ -17,7 +17,11 @@ export default function BackgroundShapes() {
                 <div className='bg-wave-circle no-colour' />
             </div>
             <div id='bg-circle-one' />
-            <div id='bg-circle-two' />
+            <div id='bg-circle-two'>
+                <div className='offset-heading'>
+                    <b>Samridh Anand Paatni</b>
+                </div>
+            </div>
             <div id='bg-circle-three' />
         </div>
     );
