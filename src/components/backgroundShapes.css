@@ -1,38 +1,8 @@
+/* *** Basic *** */
+
 #bg-wave {
-    top: 0;
-    left: 0;
     position: fixed;
-    width: var(--wave-width);
-    height: 100vh;
     background-color: var(--main-orange);
-    border: 0;
-    border-color: var(--light-blue);
-    z-index: -1;
-}
-
-.bg-wave-circle {
-    position: relative;
-    margin: 0;
-    height: var(--wave-radius);
-    width: var(--wave-radius);
-    border-radius: var(--wave-radius);
-    z-index: inherit;
-}
-
-.colour {
-    background-color: var(--main-orange);
-    transform: translateX(calc(var(--wave-width) - 2px));
-    border-radius: 0 var(--wave-radius) var(--wave-radius) 0;
-    width: calc(var(--wave-radius) / 2);
-}
-
-.no-colour {
-    transform: translateX(
-        calc(var(--wave-width) - (var(--wave-radius) / 2) + 2px)
-    );
-    width: calc(var(--wave-radius) / 2 + 1px);
-    background-color: var(--light-blue);
-    border-radius: var(--wave-radius) 0 0 var(--wave-radius);
 }
 
 #bg-circle-one {
@@ -41,12 +11,6 @@
     width: calc(var(--circle-one-radius) * 2);
     height: calc(var(--circle-one-radius) * 2);
     border-radius: calc(var(--circle-one-radius) * 2);
-    z-index: -1;
-
-    transform: translate(
-        calc(50vw - var(--circle-one-radius)),
-        calc(-1 * var(--circle-one-radius) / 4)
-    );
 }
 
 #bg-circle-two {
@@ -55,12 +19,6 @@
     width: calc(var(--circle-two-radius) * 2);
     height: calc(var(--circle-two-radius) * 2);
     border-radius: calc(var(--circle-two-radius) * 2);
-    z-index: -1;
-
-    transform: translate(
-        calc(100vw - var(--circle-two-radius) * 1.5),
-        calc(100vh - var(--circle-two-radius) * 1.5)
-    );
 }
 
 #bg-circle-three {
@@ -69,29 +27,66 @@
     width: calc(var(--circle-three-radius) * 2);
     height: calc(var(--circle-three-radius) * 2);
     border-radius: calc(var(--circle-three-radius) * 2);
-    z-index: -1;
-
-    transform: translate(calc(20vw), calc(80vh));
 }
 
+/* *** PCs *** */
+@media only screen and (min-width: 600px) {
+    #bg-wave {
+        width: var(--wave-width);
+        height: calc(100vh - var(--wave-radius));
+    }
+
+    .bg-wave-circle {
+        height: var(--wave-radius);
+    }
+
+    .colour {
+        background-color: var(--main-orange);
+        transform: translateX(calc(var(--wave-width) - 2px));
+        border-radius: 0 var(--wave-radius) var(--wave-radius) 0;
+        width: calc(var(--wave-radius) / 2);
+        z-index: 100;
+    }
+
+    .no-colour {
+        transform: translateX(
+            calc(var(--wave-width) - (var(--wave-radius) / 2) + 2px)
+        );
+        width: calc(var(--wave-radius) / 2 + 1px);
+        background-color: var(--light-blue);
+        border-radius: var(--wave-radius) 0 0 var(--wave-radius);
+    }
+
+    #bg-circle-one {
+        transform: translate(
+            calc(50vw - var(--circle-one-radius)),
+            calc(-1 * var(--circle-one-radius) / 4)
+        );
+    }
+
+    #bg-circle-two {
+        transform: translate(
+            calc(100vw - var(--circle-two-radius) * 1.5),
+            calc(100vh - var(--circle-two-radius) * 1.2)
+        );
+    }
+
+    #bg-circle-three {
+        transform: translate(calc(20vw), calc(80vh));
+    }
+}
+
+/* *** Phones *** */
 @media only screen and (max-width: 600px) {
     #bg-wave {
         display: flex;
         flex-direction: row;
-        position: fixed;
         width: 100vw;
         height: var(--wave-width);
-        background-color: var(--main-orange);
-        border: 0;
-        border-color: var(--light-blue);
-        z-index: 0;
     }
 
     .bg-wave-circle {
-        position: relative;
-        margin: 0;
         width: var(--wave-radius);
-        z-index: inherit;
     }
 
     .colour {
@@ -106,8 +101,6 @@
             calc(var(--wave-width) - (var(--wave-radius) / 2) + 2px)
         );
         height: calc(var(--wave-radius) / 2);
-        z-index: -1;
-
         background-color: var(--light-blue);
         border-radius: var(--wave-radius) var(--wave-radius) 0 0;
     }

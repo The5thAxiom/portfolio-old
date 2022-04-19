@@ -1,0 +1,62 @@
+/* *** Basic *** */
+
+.sidelinks-link {
+    display: block;
+
+    width: var(--sidelinks-link-radius);
+    height: var(--sidelinks-link-radius);
+
+    padding: 0;
+}
+
+a.sidelinks-link:hover svg {
+    fill: var(--main-pink);
+}
+a.sidelinks-link:hover div.sidelinks-circle {
+    background-color: (--main-blue);
+}
+
+.sidelinks-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--sidelinks-link-radius);
+    width: var(--sidelinks-link-radius);
+    border-radius: 40px;
+    background-color: black;
+}
+
+nav#sidelinks svg {
+    display: block;
+    height: 30px;
+    fill: var(--main-orange);
+}
+
+nav#sidelinks {
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: var(--sidelinks-link-radius);
+    column-gap: var(--sidelinks-link-radius);
+}
+
+/* *** PCs *** */
+@media only screen and (min-width: 600px) {
+    nav#sidelinks {
+        width: calc(var(--wave-content-width) + var(--wave-radius) * 0.5);
+        height: calc(100vh - var(--wave-radius));
+        flex-direction: column;
+    }
+}
+
+/* *** Phones *** */
+@media only screen and (max-width: 600px) {
+    nav#sidelinks {
+        width: 100vw;
+        height: calc(var(--wave-content-width) + var(--wave-radius) * 0.5);
+        flex-direction: row;
+    }
+}

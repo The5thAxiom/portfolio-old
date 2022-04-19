@@ -1,52 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
+/* *** Basic *** */
 :root {
     --light-blue: #afd5eb;
     --main-orange: #f04520;
     --main-blue: #1073e5;
     --main-pink: #ef869c;
 
-    --navbar-link-radius: 50px;
-    --circle-one-radius: min(calc(100vw / 5), calc(100vh / 3));
-    --circle-two-radius: min(calc(100vw / 4), calc(100vh / 2));
-    --circle-three-radius: min(calc(100vw / 8), calc(100vh / 5));
-    --num-waves: 5;
-    --wave-radius: calc(100vh / (var(--num-waves) * 2));
-    --wave-content-width: calc(100vw / 10);
-    --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
-
-    --content-width: calc(100vw - var(--wave-width));
-}
-
-hr {
-    background-color: black;
-    border-color: black;
+    --sidelinks-link-radius: 50px;
 }
 
 body {
     background-color: var(--light-blue);
-}
-
-body,
-div#root {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: overlay;
-}
-
-body,
-* {
-    font-family: 'Secular One', sans-serif;
 }
 
 main {
-    margin: 10px;
-    margin-left: calc(var(--wave-width) + var(--wave-radius));
+    position: fixed;
     word-wrap: break-word;
+    overflow-y: scroll;
 }
+
+/* *** PCs *** */
+@media only screen and (min-width: 600px) {
+    :root {
+        --circle-one-radius: min(calc(100vw / 5), calc(100vh / 3));
+        --circle-two-radius: min(calc(100vw / 4), calc(100vh / 2));
+        --circle-three-radius: min(calc(100vw / 8), calc(100vh / 5));
+        --num-waves: 5;
+        --wave-radius: calc(100vh / (var(--num-waves) * 2));
+        --wave-content-width: calc(100vw / 10);
+        --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
+        --full-wave-width: calc(var(--wave-width) + var(--wave-radius) * 0.5);
+    }
+    main {
+        width: calc(100vw - var(--full-wave-width) - 10px);
+        height: calc(100vh - var(--wave-radius));
+        margin-left: calc(var(--full-wave-width) + 10px);
+    }
+}
+/* *** Phones *** */
+@media only screen and (max-width: 600px) {
+    :root {
+        --circle-one-radius: min(calc(100vh / 5), calc(100vw / 3));
+        --circle-two-radius: min(calc(100vh / 4), calc(100vw / 2));
+        --circle-three-radius: min(calc(100vh / 8), calc(100vw / 5));
+        --num-waves: 5;
+        --wave-radius: calc(100vw / (var(--num-waves) * 2));
+        --wave-content-width: calc(100vh / 8);
+        --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
+        --full-wave-width: calc(var(--wave-width) + var(--wave-radius) * 0.5);
+    }
+
+    main {
+        width: calc(100vw - 10px);
+        height: calc(100vh - var(--full-wave-width) - var(--wave-radius));
+        margin-top: var(--full-wave-width);
+        margin-left: 10px;
+    }
+}
+
+/* *** Utility *** */
+
+/* links */
 
 *::selection {
     background: var(--main-pink);
@@ -69,24 +88,6 @@ a:visited:hover {
 
 h1 {
     font-size: 4rem;
-}
-
-@media only screen and (max-width: 600px) {
-    :root {
-        --circle-one-radius: min(calc(100vh / 5), calc(100vw / 3));
-        --circle-two-radius: min(calc(100vh / 4), calc(100vw / 2));
-        --circle-three-radius: min(calc(100vh / 8), calc(100vw / 5));
-        --num-waves: 5;
-        --wave-radius: calc(100vw / (var(--num-waves) * 2));
-        --wave-content-width: calc(100vh / 8);
-        --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
-    }
-
-    main {
-        padding-left: 10px;
-        margin-left: 10px;
-        margin-top: calc(var(--wave-width) + var(--wave-radius));
-    }
 }
 
 /* scrollbar */
@@ -116,4 +117,13 @@ h1 {
 
 ::-webkit-scrollbar:horizontal {
     display: none;
+}
+
+* {
+    font-family: 'Secular One', sans-serif;
+}
+
+hr {
+    background-color: black;
+    border-color: black;
 }
