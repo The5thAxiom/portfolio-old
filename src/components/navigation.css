@@ -15,26 +15,21 @@ nav#navigation {
     background-color: black;
 }
 
-nav#navigation a {
+a.navigation-link {
+    padding: 0;
+    margin: 0;
+    height: calc(var(--wave-radius) - 5px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     color: var(--main-orange);
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
 }
 
-nav#navigation a.current-page {
-    transform: scale(2);
-}
-
-/* *** PCs *** */
-@media only screen and (min-width: 600px) {
-    nav#navigation a {
-        font-size: medium;
-    }
-}
-
-/* *** Phones *** */
-@media only screen and (max-width: 600px) {
-    nav#navigation a {
-        font-size: small;
-    }
+a.navigation-link.current-page {
+    color: var(--main-pink);
+    border-bottom: var(--main-pink) 5px solid;
 }

@@ -72,7 +72,7 @@
     }
 
     #bg-circle-three {
-        transform: translate(calc(20vw), calc(80vh));
+        transform: translate(calc(30vw), calc(80vh));
     }
 }
 

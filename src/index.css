@@ -7,20 +7,20 @@
     --main-blue: #1073e5;
     --main-pink: #ef869c;
 
-    --sidelinks-link-radius: 50px;
+    --sidelinks-link-radius: min(calc(100vw / 10), 50px);
 }
 
 body {
     background-color: var(--light-blue);
     width: 100vw;
     height: 100vh;
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
     margin: 0;
     padding: 0;
 }
 
 html {
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 main {
@@ -47,6 +47,7 @@ main {
         margin-left: calc(var(--full-wave-width) + 10px);
     }
 }
+
 /* *** Phones *** */
 @media only screen and (max-width: 600px) {
     :root {
@@ -65,6 +66,13 @@ main {
         height: calc(100vh - var(--full-wave-width) - var(--wave-radius));
         margin-top: var(--full-wave-width);
         margin-left: 10px;
+    }
+}
+
+/* *** smallest *** */
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
     }
 }
 
@@ -93,6 +101,16 @@ a:visited:hover {
 
 h1 {
     font-size: 4rem;
+}
+
+a.project-icon-link svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--main-orange);
+}
+
+a.project-icon-link:hover svg {
+    fill: var(--main-pink);
 }
 
 /* scrollbar */

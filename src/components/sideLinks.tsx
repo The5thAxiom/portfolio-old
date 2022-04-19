@@ -1,21 +1,19 @@
 import React from 'react';
 import { socialLinks } from '../data';
+import OutboundLink from './outboundLink';
 import './sidelinks.css';
 
 export default function SideLinks() {
     return (
         <nav id='sidelinks'>
             {socialLinks.map((link, index) => (
-                <a
-                    className='sidelinks-link'
+                <OutboundLink
+                    className='sidelinks-circle'
                     key={index}
-                    href={link.link}
-                    target='_blank'
-                    rel='noreferrer'
+                    to={link.link}
                 >
-                    <div className='sidelinks-circle'>{link.icon}</div>
-                    <br />
-                </a>
+                    {link.icon}
+                </OutboundLink>
             ))}
         </nav>
     );

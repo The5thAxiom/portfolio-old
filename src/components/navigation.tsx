@@ -11,7 +11,8 @@ export default function Navigation() {
                     key={index}
                     to={page.link}
                     className={({ isActive }) =>
-                        '' + (isActive ? 'current-page' : 'other-page')
+                        'navigation-link' +
+                        (isActive ? ' current-page' : ' other-page')
                     }
                 >
                     {page.title}

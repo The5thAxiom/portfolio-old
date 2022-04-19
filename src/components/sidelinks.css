@@ -1,35 +1,26 @@
 /* *** Basic *** */
 
-.sidelinks-link {
+.sidelinks-circle {
     display: block;
-
     width: var(--sidelinks-link-radius);
     height: var(--sidelinks-link-radius);
-
     padding: 0;
-}
-
-a.sidelinks-link:hover svg {
-    fill: var(--main-pink);
-}
-a.sidelinks-link:hover div.sidelinks-circle {
-    background-color: (--main-blue);
-}
-
-.sidelinks-circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: var(--sidelinks-link-radius);
-    width: var(--sidelinks-link-radius);
     border-radius: 40px;
     background-color: black;
 }
 
-nav#sidelinks svg {
+a.sidelinks-circle svg {
     display: block;
-    height: 30px;
+    height: calc(var(--sidelinks-link-radius) / 2);
+    width: calc(var(--sidelinks-link-radius) / 2);
     fill: var(--main-orange);
+}
+
+a.sidelinks-circle:hover svg {
+    fill: var(--main-pink);
 }
 
 nav#sidelinks {

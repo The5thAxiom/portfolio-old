@@ -1,6 +1,9 @@
 import React from 'react';
 import CycleTrough from './components/cycleThrough';
+import Imp from './components/imp';
+import OutboundLink from './components/outboundLink';
 import { general, projects } from './data';
+import { GithubIcon, ExplorerIcon } from './icons';
 
 type page = {
     title: string;
@@ -16,7 +19,10 @@ export const pages: page[] = [
             <>
                 <h1>Hello 👋, I am Samridh!</h1>
                 <span style={{ fontSize: '2rem' }}>
-                    I am a: <CycleTrough array={general.roles} />
+                    I am a:{' '}
+                    <Imp>
+                        <CycleTrough array={general.roles} />
+                    </Imp>
                 </span>
             </>
         ),
@@ -28,9 +34,9 @@ export const pages: page[] = [
             <>
                 <h1>About me</h1>
                 <p>
-                    Hello reader! I am {general.name}. I'm a UG Student at VIT
-                    Chennai, pursuing a BTech in Computer Science and
-                    Engineering.
+                    Hello reader! I am <Imp>{general.name}</Imp>. I'm a UG
+                    Student at <Imp>VIT Chennai</Imp>, pursuing a{' '}
+                    <Imp>BTech in Computer Science and Engineering</Imp>.
                     {general.intro}
                 </p>
                 <h2>Things I am good at</h2>
@@ -57,18 +63,23 @@ export const pages: page[] = [
                 <h1>My Projects</h1>
                 {projects.map((project, index) => (
                     <section key={index} id={project.name}>
-                        {project.directLink ? (
-                            <h2>
-                                <a href={project.directLink}>{project.name}</a>
-                            </h2>
-                        ) : (
-                            <h2>{project.name}</h2>
-                        )}
-                        <b>
-                            <a href={project.githubLink}>
-                                check it out on github
-                            </a>
-                        </b>
+                        <h2>
+                            {project.name}{' '}
+                            <OutboundLink
+                                className='project-icon-link'
+                                to={project.githubLink}
+                            >
+                                {GithubIcon}
+                            </OutboundLink>{' '}
+                            {project.directLink && (
+                                <OutboundLink
+                                    to={project.directLink}
+                                    className='project-icon-link'
+                                >
+                                    {ExplorerIcon}
+                                </OutboundLink>
+                            )}
+                        </h2>
                         <p>{project.about}</p>
                         {index !== projects.length - 1 && <hr />}
                     </section>
@@ -82,13 +93,26 @@ export const pages: page[] = [
     //     content: (
     //         <>
     //             <h1>Experience</h1>
-    //             <p>lol</p>
+    //             <h2>Member of Linux Club</h2>
     //         </>
     //     ),
     // },
     // {
-    //     title: 'Contact Me',
+    //     title: 'Education',
+    //     link: '/education',
+    //     content: (
+    //         <>
+    //             <h1>Education</h1>
+    //         </>
+    //     ),
+    // },
+    // {
+    //     title: 'Contact',
     //     link: '/contact',
-    //     content: <>email: ?</>,
+    //     content: (
+    //         <>
+    //             <h1>Contact Me!</h1>
+    //         </>
+    //     ),
     // },
 ];
