@@ -1,13 +1,11 @@
 /* *** Basic *** */
 
 #bg-wave {
-    z-index: 0;
     position: fixed;
     background-color: var(--main-orange);
 }
 
 #bg-circle-one {
-    z-index: -1;
     position: fixed;
     background-color: var(--main-blue);
     width: calc(var(--circle-one-radius) * 2);
@@ -16,7 +14,6 @@
 }
 
 #bg-circle-two {
-    z-index: -1;
     position: fixed;
     background-color: var(--main-blue);
     width: calc(var(--circle-two-radius) * 2);
@@ -25,7 +22,6 @@
 }
 
 #bg-circle-three {
-    z-index: -1;
     position: fixed;
     background-color: var(--main-blue);
     width: calc(var(--circle-three-radius) * 2);
@@ -53,7 +49,6 @@
     }
 
     .no-colour {
-        z-index: -1;
         transform: translateX(
             calc(var(--wave-width) - (var(--wave-radius) / 2) + 2px)
         );

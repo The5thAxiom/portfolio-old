@@ -28,6 +28,7 @@ export const pages: page[] = [
         content: (
             <>
                 <h1>About me</h1>
+                <p>{general.intro}</p>
                 <h2>Things I am good at</h2>
                 <h3>Programming:</h3>
                 <ul>
@@ -71,19 +72,19 @@ export const pages: page[] = [
             </>
         ),
     },
-    {
-        title: 'Experience',
-        link: '/experience',
-        content: (
-            <>
-                <h1>Experience</h1>
-                <p>lol</p>
-            </>
-        ),
-    },
-    {
-        title: 'Contact Me',
-        link: '/contact',
-        content: <>email: ?</>,
-    },
+    // {
+    //     title: 'Experience',
+    //     link: '/experience',
+    //     content: (
+    //         <>
+    //             <h1>Experience</h1>
+    //             <p>lol</p>
+    //         </>
+    //     ),
+    // },
+    // {
+    //     title: 'Contact Me',
+    //     link: '/contact',
+    //     content: <>email: ?</>,
+    // },
 ];

@@ -8,7 +8,6 @@
     --main-pink: #ef869c;
 
     --sidelinks-link-radius: 50px;
-    /* --content-width: calc(100vw - var(--wave-width)); */
 }
 
 body {
@@ -23,8 +22,6 @@ main {
     position: fixed;
     word-wrap: break-word;
     overflow-y: scroll;
-    z-index: 0;
-    /* background-color: red; */
 }
 
 /* *** PCs *** */
@@ -55,9 +52,7 @@ main {
         --wave-radius: calc(100vw / (var(--num-waves) * 2));
         --wave-content-width: calc(100vh / 8);
         --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
-        --full-wave-width: calc(
-            var(--wave-width) /*  + var(--wave-radius) * 0.5 */
-        );
+        --full-wave-width: calc(var(--wave-width) + var(--wave-radius) * 0.5);
     }
 
     main {
