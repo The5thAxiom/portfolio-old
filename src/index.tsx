@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { pages } from './components/pages';
+import { pages } from './pages';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

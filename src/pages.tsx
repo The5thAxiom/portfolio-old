@@ -1,6 +1,6 @@
 import React from 'react';
-import CycleTrough from '../components/cycleThrough';
-import { general, projects } from '../data';
+import CycleTrough from './components/cycleThrough';
+import { general, projects } from './data';
 
 type page = {
     title: string;
@@ -15,7 +15,6 @@ export const pages: page[] = [
         content: (
             <>
                 <h1>Hello 👋, I am Samridh!</h1>
-                {/* <p>{general.intro}</p> */}
                 <span style={{ fontSize: '2rem' }}>
                     I am a: <CycleTrough array={general.roles} />
                 </span>
@@ -28,7 +27,12 @@ export const pages: page[] = [
         content: (
             <>
                 <h1>About me</h1>
-                <p>{general.intro}</p>
+                <p>
+                    Hello reader! I am {general.name}. I'm a UG Student at VIT
+                    Chennai, pursuing a BTech in Computer Science and
+                    Engineering.
+                    {general.intro}
+                </p>
                 <h2>Things I am good at</h2>
                 <h3>Programming:</h3>
                 <ul>
