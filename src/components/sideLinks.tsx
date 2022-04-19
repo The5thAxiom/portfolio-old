@@ -1,19 +1,19 @@
 import React from 'react';
 import { socialLinks } from '../data';
-import './navbar.css';
+import './sidelinks.css';
 
-export default function Navbar() {
+export default function SideLinks() {
     return (
-        <nav>
+        <nav id='sidelinks'>
             {socialLinks.map((link, index) => (
                 <a
-                    className='navbar-link'
+                    className='sidelinks-link'
                     key={index}
                     href={link.link}
                     target='_blank'
                     rel='noreferrer'
                 >
-                    <div className='navbar-circle'>{link.icon}</div>
+                    <div className='sidelinks-circle'>{link.icon}</div>
                     <br />
                 </a>
             ))}

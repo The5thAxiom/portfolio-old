@@ -1,0 +1,40 @@
+/* *** Basic *** */
+
+nav#navigation {
+    width: 100vw;
+    height: var(--wave-radius);
+
+    position: fixed;
+    transform: translateY(calc(100vh - var(--wave-radius)));
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: black;
+}
+
+nav#navigation a {
+    color: var(--main-orange);
+    text-decoration: none;
+    text-align: center;
+}
+
+nav#navigation a.current-page {
+    transform: scale(2);
+}
+
+/* *** PCs *** */
+@media only screen and (min-width: 600px) {
+    nav#navigation a {
+        font-size: medium;
+    }
+}
+
+/* *** Phones *** */
+@media only screen and (max-width: 600px) {
+    nav#navigation a {
+        font-size: small;
+    }
+}

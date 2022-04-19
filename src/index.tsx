@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import BackgroundShapes from './components/backgroundShapes';
-import Navbar from './components/navbar';
-import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { pages } from './components/pages';
 
 const root = ReactDOM.createRoot(
@@ -15,17 +13,19 @@ root.render(
         <HashRouter basename=''>
             <Routes>
                 <Route path='/' element={<App />}>
-                    <Route index element={<>hello</>} />
-                    {pages.map(page => (
-                        <Route path={page.link} element={page.content} />
-                    ))}
+                    {pages.map((page, index) =>
+                        index === 0 ? (
+                            <Route key={index} index element={page.content} />
+                        ) : (
+                            <Route
+                                key={index}
+                                path={page.link}
+                                element={page.content}
+                            />
+                        )
+                    )}
                 </Route>
             </Routes>
         </HashRouter>
-        {/* <>
-            <BackgroundShapes />
-            <Navbar />
-            <App />
-        </> */}
     </React.StrictMode>
 );

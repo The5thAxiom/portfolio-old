@@ -1,25 +1,18 @@
 import React from 'react';
-import CycleTrough from './components/cycleThrough';
-import { general, projects } from './data';
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import BackgroundShapes from './components/backgroundShapes';
-import Navbar from './components/navbar';
-import { pages } from './components/pages';
+import Navigation from './components/navigation';
+import SideLinks from './components/sideLinks';
 
 export default function App() {
     return (
         <>
             <BackgroundShapes />
-
-            <Navbar />
+            <SideLinks />
             <main>
-                <nav>
-                    {pages.map((page, index) => (
-                        <NavLink to={page.link}>{page.title}</NavLink>
-                    ))}
-                </nav>
                 <Outlet />
             </main>
+            <Navigation />
         </>
     );
 }
