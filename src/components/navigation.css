@@ -3,9 +3,9 @@
 nav#navigation {
     width: 100vw;
     height: var(--wave-radius);
+    bottom: 0;
 
     position: fixed;
-    transform: translateY(calc(100vh - var(--wave-radius)));
 
     display: flex;
     flex-direction: row;
