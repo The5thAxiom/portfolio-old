@@ -2,11 +2,11 @@
 
 /* *** Basic *** */
 :root {
-    --light-blue: #afd5eb;
-    --main-orange: #f04520;
-    --main-blue: #1073e5;
-    --main-pink: #ef869c;
-
+    --light-blue: hsl(202, 61%, 70%);
+    --main-orange: hsl(11, 87%, 53%);
+    --main-blue: hsl(212, 87%, 48%);
+    --main-pink: hsl(347, 77%, 73%);
+    --h1-font-size: 4rem;
     --sidelinks-link-radius: min(calc(100vw / 10), 50px);
 }
 
@@ -30,6 +30,20 @@ main {
     overflow-y: scroll;
 }
 
+#cycling-roles {
+    font-size: 2rem;
+}
+
+div.main-picture-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: calc(
+        var(--h1-font-size) * 0.67 / 2
+    ); /* to match the h1's margin */
+}
+
 /* *** PCs *** */
 @media only screen and (min-width: 600px) {
     :root {
@@ -41,12 +55,20 @@ main {
         --wave-content-width: calc(100vw / 10);
         --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
         --full-wave-width: calc(var(--wave-width) + var(--wave-radius) * 0.5);
+        --image-size: 250px;
     }
     main {
         width: calc(100vw - var(--full-wave-width) - 20px);
-        height: calc(100vh - var(--wave-radius));
+        height: calc(100vh - var(--wave-radius) - 30px);
         margin-left: calc(var(--full-wave-width) + 10px);
         padding-right: 10px;
+        padding-bottom: 30px;
+    }
+
+    img.main-picture {
+        width: var(--image-size);
+        height: var(--image-size);
+        border-radius: var(--image-size);
     }
 }
 
@@ -65,14 +87,24 @@ main {
         --wave-content-width: calc(100vh / 8);
         --wave-width: calc(var(--wave-content-width) + var(--wave-radius));
         --full-wave-width: calc(var(--wave-width) + var(--wave-radius) * 0.5);
+        --image-size: 250px;
     }
 
     main {
         width: calc(100vw - 20px);
-        height: calc(100vh - var(--full-wave-width) - var(--wave-radius));
+        height: calc(
+            100vh - var(--full-wave-width) - var(--wave-radius) - 30px
+        );
         margin-top: var(--full-wave-width);
-        margin-left: 10px;
+        padding-left: 10px;
         padding-right: 10px;
+        padding-bottom: 30px;
+    }
+
+    img.main-picture {
+        width: var(--image-size);
+        height: var(--image-size);
+        border-radius: var(--image-size);
     }
 }
 
@@ -107,7 +139,8 @@ a:visited:hover {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: var(--h1-font-size);
+    margin-bottom: calc(var(--h1-font-size) * 0.67 / 2);
 }
 
 a.project-icon-link svg {
