@@ -36,7 +36,7 @@ export const pages: page[] = [
                 <p>
                     Hello reader! I am <Imp>{general.name}</Imp>. I'm a UG
                     Student at <Imp>VIT Chennai</Imp>, pursuing a{' '}
-                    <Imp>BTech in Computer Science and Engineering</Imp>.
+                    <Imp>BTech in Computer Science and Engineering</Imp>.{' '}
                     {general.intro}
                 </p>
                 <h2>Things I am good at</h2>

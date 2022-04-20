@@ -43,9 +43,10 @@ main {
         --full-wave-width: calc(var(--wave-width) + var(--wave-radius) * 0.5);
     }
     main {
-        width: calc(100vw - var(--full-wave-width) - 10px);
+        width: calc(100vw - var(--full-wave-width) - 20px);
         height: calc(100vh - var(--wave-radius));
         margin-left: calc(var(--full-wave-width) + 10px);
+        padding-right: 10px;
     }
 }
 
@@ -67,10 +68,11 @@ main {
     }
 
     main {
-        width: calc(100vw - 10px);
+        width: calc(100vw - 20px);
         height: calc(100vh - var(--full-wave-width) - var(--wave-radius));
         margin-top: var(--full-wave-width);
         margin-left: 10px;
+        padding-right: 10px;
     }
 }
 
