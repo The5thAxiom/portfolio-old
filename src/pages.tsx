@@ -56,6 +56,31 @@ export const pages: page[] = [
         ),
     },
     {
+        title: 'Education',
+        link: '/education',
+        content: (
+            <>
+                <h1>Education</h1>
+                <h2>Btech in Computer Science and Education</h2>
+                <b>September, 2020 to Present</b>
+                <p>
+                    I am currently a 2nd Year UG student at{' '}
+                    <Imp>VIT, Chennai</Imp>. I have an 8.84 GPA accross 3
+                    semesters.
+                </p>
+                <h2>
+                    Class XII<sup>th</sup> (PCM)
+                </h2>
+                <b>June, 2020</b>
+                <p>
+                    I completed my class 12<sup>th</sup> education from{' '}
+                    <Imp>Millennium School, Lucknow</Imp>. I studied science and
+                    scored 91.2%.
+                </p>
+            </>
+        ),
+    },
+    {
         title: 'Projects',
         link: '/projects',
         content: (
@@ -87,25 +112,41 @@ export const pages: page[] = [
             </>
         ),
     },
-    // {
-    //     title: 'Experience',
-    //     link: '/experience',
-    //     content: (
-    //         <>
-    //             <h1>Experience</h1>
-    //             <h2>Member of Linux Club</h2>
-    //         </>
-    //     ),
-    // },
-    // {
-    //     title: 'Education',
-    //     link: '/education',
-    //     content: (
-    //         <>
-    //             <h1>Education</h1>
-    //         </>
-    //     ),
-    // },
+    {
+        title: 'Experience',
+        link: '/experience',
+        content: (
+            <>
+                <h1>Experience</h1>
+                <h2>
+                    Winning Team Member of VIT Cyscom's Cyber Defenders CTF
+                    Event
+                </h2>
+                <b>Held on 20th April, 2022</b>
+                <p>
+                    Cyber Defenders was a capture-the-flag event conducted by
+                    Cyscom, VIT Chennai's chapter of OWASP. It consisted of
+                    finding flags hidded in plain sight by using our
+                    cybersecurity and hacking knowledge. My team stood first in
+                    the event.
+                </p>
+                <h2>Member of Linux Club</h2>
+                <b>October 2021 to Present</b>
+                <p>
+                    A club dedicated to promoting Linux and Free and Open Source
+                    Software (FOSS). I work on their{' '}
+                    <OutboundLink to='https://lugvitc.github.io'>
+                        website
+                    </OutboundLink>{' '}
+                    and helped organise the{' '}
+                    <OutboundLink to='https://lugvitc.github.io/#/events#adrenaline'>
+                        Adrenaline/FOSS Day
+                    </OutboundLink>{' '}
+                    event.
+                </p>
+            </>
+        ),
+    },
     // {
     //     title: 'Contact',
     //     link: '/contact',
