@@ -1,11 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-
 /* *** Basic *** */
 :root {
-    --light-blue: hsl(202, 61%, 70%);
-    --main-orange: hsl(11, 87%, 53%);
-    --main-blue: hsl(212, 87%, 48%);
-    --main-pink: hsl(347, 77%, 73%);
     --h1-font-size: 4rem;
     --sidelinks-link-radius: min(calc(100vw / 10), 50px);
 }
@@ -117,27 +111,6 @@ div.main-picture-container {
 
 /* *** Utility *** */
 
-/* links */
-
-*::selection {
-    background: var(--main-pink);
-    color: var(--main-blue);
-}
-
-a::selection {
-    color: black;
-}
-
-a,
-a:visited {
-    color: var(--main-orange);
-}
-
-a:hover,
-a:visited:hover {
-    color: var(--main-pink);
-}
-
 h1 {
     font-size: var(--h1-font-size);
     margin-bottom: calc(var(--h1-font-size) * 0.67 / 2);
@@ -151,42 +124,4 @@ a.project-icon-link svg {
 
 a.project-icon-link:hover svg {
     fill: var(--main-pink);
-}
-
-/* scrollbar */
-
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    display: none;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--main-orange);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--main-pink);
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: var(--main-pink);
-}
-
-::-webkit-scrollbar:horizontal {
-    display: none;
-}
-
-* {
-    font-family: 'Secular One', sans-serif;
-}
-
-hr {
-    background-color: black;
-    border-color: black;
 }
