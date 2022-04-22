@@ -70,7 +70,7 @@ export const pages: page[] = [
                         Winning Team Member of VIT Cyscom's Cyber Defenders CTF
                         Event
                     </h2>
-                    <b>Held on 20th April, 2022</b>
+                    <b>Held on the 19th && 20th of April, 2022</b>
                     <p>
                         Cyber Defenders was a capture-the-flag event conducted
                         by Cyscom, VIT Chennai's chapter of OWASP. It consisted
@@ -79,7 +79,7 @@ export const pages: page[] = [
                         in the event.
                     </p>
                     <h2>Member of Linux Club</h2>
-                    <b>October 2021 to Present</b>
+                    <b>October, 2021 to Present</b>
                     <p>
                         A club dedicated to promoting Linux and Free and Open
                         Source Software (FOSS). I work on their{' '}
