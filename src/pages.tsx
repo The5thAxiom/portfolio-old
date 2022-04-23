@@ -19,9 +19,9 @@ export const pages: page[] = [
         content: (
             <>
                 <h1>Hello 👋, I am Samridh!</h1>
-                <div className='main-picture-container'>
+                {/* <div className='main-picture-container'>
                     <img className='main-picture' src={mainPicture} />
-                </div>
+                </div> */}
                 <span id='cycling-roles'>
                     I am a:{' '}
                     <Imp>
@@ -168,13 +168,15 @@ export const pages: page[] = [
                     <OutboundLink to='https://www.typescriptlang.org/'>
                         typescript
                     </OutboundLink>{' '}
-                    hosted using Github Pages.
-                    <br />
-                    All of the icons are from{' '}
+                    hosted using Github Pages. . <br />
+                    Title bar icon by{' '}
+                    <OutboundLink to='https://icon-icons.com/'>
+                        icon-icons
+                    </OutboundLink>
+                    , the rest are from{' '}
                     <OutboundLink to='https://simpleicons.org/'>
                         simple icons
                     </OutboundLink>
-                    .
                 </p>
                 <h1>Copyleft</h1>
                 <p>
