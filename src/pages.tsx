@@ -18,7 +18,7 @@ export const pages: page[] = [
         link: '/',
         content: (
             <>
-                <h1>Hello 👋, I am Samridh!</h1>
+                <h1>Hello 👋, I am Samridh Anand Paatni!</h1>
                 {/* <div className='main-picture-container'>
                     <img className='main-picture' src={mainPicture} />
                 </div> */}
@@ -29,7 +29,7 @@ export const pages: page[] = [
                     </Imp>
                 </span>
             </>
-        ),
+        )
     },
     {
         title: 'About Me',
@@ -57,7 +57,7 @@ export const pages: page[] = [
                     ))}
                 </ul>
             </>
-        ),
+        )
     },
     {
         title: 'Experience\n&&\nEducation',
@@ -113,7 +113,7 @@ export const pages: page[] = [
                     </p>
                 </section>
             </>
-        ),
+        )
     },
     {
         title: 'My\nProjects',
@@ -145,7 +145,7 @@ export const pages: page[] = [
                     </section>
                 ))}
             </>
-        ),
+        )
     },
     {
         title: 'Contact Me',
@@ -185,6 +185,7 @@ export const pages: page[] = [
                     under the GNU GPL v-2 license.
                 </p>
             </>
-        ),
-    },
+        )
+    }
 ];
+
