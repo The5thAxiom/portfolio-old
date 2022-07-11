@@ -18,7 +18,7 @@ export const pages: page[] = [
         link: '/',
         content: (
             <>
-                <h1>Hello 👋, I am Samridh Anand Paatni!</h1>
+                <h1>Hi! 👋, I am Samridh Anand Paatni</h1>
                 {/* <div className='main-picture-container'>
                     <img className='main-picture' src={mainPicture} />
                 </div> */}
